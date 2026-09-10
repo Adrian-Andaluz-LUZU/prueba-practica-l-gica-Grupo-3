@@ -15,7 +15,7 @@
   # 👥 Integrantes, Roles
   
 | Integrante | Usuario GitHub | Rol HCI | 
-|---|---|---|---|---|
+|---|---|---|
 | Paulo Escobar | Paulo-cmd661 | codigo |  
 | Adrian Andaluz | Adrian-Andaluz-LUZU | Analisis |  
 | Mateo Salazar | J-mateore | Diagrama de flujo |  
