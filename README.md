@@ -1,1 +1,1 @@
-# prueba-practica-l-gica-Grupo-3
+# prueba-practica-logica-Grupo-3
