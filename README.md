@@ -16,7 +16,7 @@
   
 | Integrante | Usuario GitHub | Rol HCI | Issue Cerrado | Commits Significativos |
 |---|---|---|---|---|
-| Paulo Escobar | Paulo-cmd661 |  |  |  |
-| Adrian Andaluz | Adrian-Andaluz-LUZU |  |  |  |
-| Mateo Salazar | J-mateore |  |  |  |
-| Ariel Chanatasig | Ariel_Gxo |  |  |  |
+| Paulo Escobar | Paulo-cmd661 | codigo |  |  |
+| Adrian Andaluz | Adrian-Andaluz-LUZU | Analisis |  |  |
+| Mateo Salazar | J-mateore | Diagrama de flujo |  |  |
+| Ariel Chanatasig | Ariel_Gxo | Prueba de Escritorio |  |  |
