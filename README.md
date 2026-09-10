@@ -14,7 +14,7 @@
 * 
 | Integrante | Usuario GitHub | Rol HCI | Issue Cerrado | Commits Significativos |
 |---|---|---|---|---|
-| Paulo Escobar |  |  |  |  |
-| Adrian Andaluz |  |  |  |  |
-| Mateo Salazar |  |  |  |  |
-| Ariel Chanatasig |  |  |  |  |
+| Paulo Escobar | Paulo-cmd661 |  |  |  |
+| Adrian Andaluz | Adrian-Andaluz-LUZU |  |  |  |
+| Mateo Salazar | J-mateore |  |  |  |
+| Ariel Chanatasig | Ariel_Gxo |  |  |  |
