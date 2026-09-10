@@ -11,7 +11,7 @@
 * **Ciclo Académico:** Agosto – Diciembre 2026
 * **Asignatura:** Algoritmos y lógica de programación
 * **Docente:** Ing. José Caiza, Mg.
-* 
+* # INTEGRANTES , ROLES
 | Integrante | Usuario GitHub | Rol HCI | Issue Cerrado | Commits Significativos |
 |---|---|---|---|---|
 | Paulo Escobar | Paulo-cmd661 |  |  |  |
