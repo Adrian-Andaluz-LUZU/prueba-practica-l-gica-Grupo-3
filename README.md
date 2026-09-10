@@ -14,9 +14,9 @@
   
   # 👥 Integrantes, Roles
   
-| Integrante | Usuario GitHub | Rol HCI | Issue Cerrado | Commits Significativos |
+| Integrante | Usuario GitHub | Rol HCI | 
 |---|---|---|---|---|
-| Paulo Escobar | Paulo-cmd661 | codigo |  |  |
-| Adrian Andaluz | Adrian-Andaluz-LUZU | Analisis |  |  |
-| Mateo Salazar | J-mateore | Diagrama de flujo |  |  |
-| Ariel Chanatasig | Ariel_Gxo | Prueba de Escritorio |  |  |
+| Paulo Escobar | Paulo-cmd661 | codigo |  
+| Adrian Andaluz | Adrian-Andaluz-LUZU | Analisis |  
+| Mateo Salazar | J-mateore | Diagrama de flujo |  
+| Ariel Chanatasig | Ariel_Gxo | Prueba de Escritorio |  
