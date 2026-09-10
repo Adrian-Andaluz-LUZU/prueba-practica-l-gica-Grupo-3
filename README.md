@@ -12,3 +12,9 @@
 * **Asignatura:** Algoritmos y lógica de programación
 * **Docente:** Ing. José Caiza, Mg.
 * 
+| Integrante | Usuario GitHub | Rol HCI | Issue Cerrado | Commits Significativos |
+|---|---|---|---|---|
+| Paulo Escobar |  |  |  |  |
+| Adrian Andaluz |  |  |  |  |
+| Mateo Salazar |  |  |  |  |
+| Ariel Chanatasig |  |  |  |  |
