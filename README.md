@@ -14,7 +14,7 @@
   
   # 👥 Integrantes, Roles
   
-| Integrante | Usuario GitHub | Rol HCI | 
+| Integrante | Usuario GitHub | Rol | 
 |---|---|---|
 | Paulo Escobar | Paulo-cmd661 | codigo |  
 | Adrian Andaluz | Adrian-Andaluz-LUZU | Analisis |  
