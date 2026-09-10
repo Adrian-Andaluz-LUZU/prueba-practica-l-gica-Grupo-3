@@ -10,7 +10,7 @@
 * **Carrera:** Software — 1ro "B"
 * **Ciclo Académico:** Agosto – Diciembre 2026
 * **Asignatura:** Algoritmos y lógica de programación
-* **Docente:** Ing. José Caiza, Mg.
+* **Docente:** Ing. José Caiza, Mg. ok
   
   # 👥 Integrantes, Roles
   
