@@ -1,33 +1,49 @@
 import java.util.Scanner;
-
+//Mateo Salazar//
 public class Ejercicio1 {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Declaración de variables
-        double reto1, reto2, reto3, errores, tiempo;
-        String desafio, copia, nivel;
-        double puntajeBase, penalizacion, bonificacion, puntajeFinal;
+        Scanner sc = new Scanner(System.in);
 
-        // Entrada de datos con validación para evitar números negativos
-        reto1 = leerNumeroValido(scanner, "Ingrese puntaje del reto 1: ");
-        reto2 = leerNumeroValido(scanner, "Ingrese puntaje del reto 2: ");
-        reto3 = leerNumeroValido(scanner, "Ingrese puntaje del reto 3: ");
-        errores = leerNumeroValido(scanner, "Ingrese número de errores: ");
-        tiempo = leerNumeroValido(scanner, "Ingrese tiempo total en minutos: ");
+        int reto1, reto2, reto3;
+        int errores, tiempo;
+        int puntajeBase, penalizacion, bonificacion, puntajeFinal;
+        String extra, copia;
+        String nivel, observacion;
 
-        System.out.print("Resolvió desafío extra (SI/NO): ");
-        desafio = scanner.next().trim();
+        // Datos de entrada
+        System.out.print("Ingrese puntaje del reto 1: ");
+        reto1 = sc.nextInt();
 
-        System.out.print("Descalificado por copia (SI/NO): ");
-        copia = scanner.next().trim();
+        System.out.print("Ingrese puntaje del reto 2: ");
+        reto2 = sc.nextInt();
 
-        // Procesos y Cálculos
+        System.out.print("Ingrese puntaje del reto 3: ");
+        reto3 = sc.nextInt();
+
+        System.out.print("Ingrese numero de errores: ");
+        errores = sc.nextInt();
+
+        System.out.print("Ingrese tiempo total en minutos: ");
+        tiempo = sc.nextInt();
+
+        System.out.print("¿Resolvio el desafio extra? (Si/No): ");
+        extra = sc.next();
+
+        System.out.print("¿Fue descalificado por copia? (Si/No): ");
+        copia = sc.next();
+
+        // Puntaje base
         puntajeBase = reto1 + reto2 + reto3;
+
+        // Penalizacion
         penalizacion = errores * 4;
+
+        // Bonificacion
         bonificacion = 0;
 
-        if (desafio.equalsIgnoreCase("SI")) {
+        if (extra.equalsIgnoreCase("Si")) {
             bonificacion = bonificacion + 15;
         }
 
@@ -35,65 +51,46 @@ public class Ejercicio1 {
             bonificacion = bonificacion + 10;
         }
 
+        // Puntaje final
         puntajeFinal = puntajeBase - penalizacion + bonificacion;
 
         if (puntajeFinal < 0) {
             puntajeFinal = 0;
         }
 
-        // Estructura condicional anidada para determinar el nivel
-        if (puntajeFinal <= 29) {
-            nivel = "Principiante";
-        } else {
-            if (puntajeFinal <= 49) {
-                nivel = "Básico";
-            } else {
-                if (puntajeFinal <= 69) {
-                    nivel = "Intermedio";
-                } else {
-                    if (puntajeFinal <= 89) {
-                        nivel = "Avanzado";
-                    } else {
-                        nivel = "Experto";
-                    }
-                }
-            }
-        }
-
-        if (copia.equalsIgnoreCase("SI")) {
+        // Determinar nivel
+        if (copia.equalsIgnoreCase("Si")) {
             nivel = "Descalificado";
+        } else if (puntajeFinal <= 29) {
+            nivel = "Principiante";
+        } else if (puntajeFinal <= 49) {
+            nivel = "Basico";
+        } else if (puntajeFinal <= 69) {
+            nivel = "Intermedio";
+        } else if (puntajeFinal <= 89) {
+            nivel = "Avanzado";
+        } else {
+            nivel = "Experto";
         }
 
-        // Salidas
-        System.out.println("----------------------------------");
-        System.out.println("Puntaje Base: " + puntajeBase);
-        System.out.println("Penalización: " + penalizacion);
-        System.out.println("Bonificación: " + bonificacion);
-        System.out.println("Puntaje Final: " + puntajeFinal);
+        // Determinar observacion
+        if (copia.equalsIgnoreCase("Si")) {
+            observacion = "Participante descalificado por copia.";
+        } else if (puntajeFinal >= 70 && errores >= 5) {
+            observacion = "Resultado inconsistente: revisar calidad de resolucion.";
+        } else {
+            observacion = "Resultado valido.";
+        }
+
+        // Mostrar resultados
+        System.out.println("\n===== RESULTADOS =====");
+        System.out.println("Puntaje base: " + puntajeBase);
+        System.out.println("Penalizacion: " + penalizacion);
+        System.out.println("Bonificacion: " + bonificacion);
+        System.out.println("Puntaje final: " + puntajeFinal);
         System.out.println("Nivel: " + nivel);
+        System.out.println("Observacion: " + observacion);
 
-        if (puntajeFinal >= 70 && errores >= 5) {
-            System.out.println("Observación: Resultado inconsistente: revisar calidad de resolución");
-        }
-
-        scanner.close();
-    }
-
-    // Método auxiliar para validar datos numéricos
-    private static double leerNumeroValido(Scanner sc, String mensaje) {
-        double valor;
-        do {
-            System.out.print(mensaje);
-            while (!sc.hasNextDouble()) {
-                System.out.println("Error: Ingrese un valor numérico válido.");
-                sc.next();
-                System.out.print(mensaje);
-            }
-            valor = sc.nextDouble();
-            if (valor < 0) {
-                System.out.println("Error: El valor no puede ser negativo.");
-            }
-        } while (valor < 0);
-        return valor;
+        sc.close();
     }
 }

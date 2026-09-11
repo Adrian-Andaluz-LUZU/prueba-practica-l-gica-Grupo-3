@@ -1,67 +1,86 @@
 import java.util.Scanner;
-
+//Mateo Salazar//
 public class Ejercicio2 {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        // 1. Entrada de datos
-        System.out.print("Ingrese las 3 notas (Análisis, Diseño, Codificación): ");
-        double n1 = sc.nextDouble();
-        double n2 = sc.nextDouble();
-        double n3 = sc.nextDouble();
+        double analisis, diseno, codificacion;
+        double avance, promedio, ajustes, notaFinal;
+        int errores;
+        String documentacion, exposicion;
+        String estado, observacion;
 
-        System.out.print("Ingrese el % de avance y el número de errores: ");
-        double avance = sc.nextDouble();
-        int errores = sc.nextInt();
+        System.out.print("Nota de analisis: ");
+        analisis = sc.nextDouble();
 
-        System.out.print("¿Presentó documentación completa? (SI/NO): ");
-        String doc = sc.next().trim();
+        System.out.print("Nota de diseno: ");
+        diseno = sc.nextDouble();
 
-        System.out.print("¿Realizó exposición final? (SI/NO): ");
-        String expo = sc.next().trim();
+        System.out.print("Nota de codificacion: ");
+        codificacion = sc.nextDouble();
 
-        // 2. Cálculos
-        double prom = (n1 + n2 + n3) / 3.0;
-        double ajustes = -(errores * 0.5);
+        System.out.print("Porcentaje de avance real: ");
+        avance = sc.nextDouble();
 
-        if (doc.equalsIgnoreCase("SI")) {
+        System.out.print("Numero de errores: ");
+        errores = sc.nextInt();
+
+        System.out.print("¿Documentacion completa? (Si/No): ");
+        documentacion = sc.next();
+
+        System.out.print("¿Realizo exposicion final? (Si/No): ");
+        exposicion = sc.next();
+
+        promedio = (analisis + diseno + codificacion) / 3;
+
+        ajustes = errores * -0.5;
+
+        if (documentacion.equalsIgnoreCase("Si")) {
             ajustes += 0.5;
         }
-        if (expo.equalsIgnoreCase("SI")) {
+
+        if (exposicion.equalsIgnoreCase("Si")) {
             ajustes += 0.5;
         }
 
-        double notaFinal = prom + ajustes;
-        if (notaFinal > 10) notaFinal = 10;
-        if (notaFinal < 0) notaFinal = 0;
+        notaFinal = promedio + ajustes;
 
-        // 3. Determinar Estado
-        String estado;
+        if (notaFinal > 10) {
+            notaFinal = 10;
+        }
+
+        if (notaFinal < 0) {
+            notaFinal = 0;
+        }
+
         if (notaFinal >= 9) {
             estado = "Excelente";
         } else if (notaFinal >= 7) {
             estado = "Aprobado";
         } else if (notaFinal >= 5) {
-            estado = "Recuperación";
+            estado = "Recuperacion";
         } else {
             estado = "Reprobado";
         }
 
-        // Restricción por avance
-        if (avance < 60 && estado.equals("Excelente")) {
-            estado = "Aprobado";
+        if (avance < 60) {
+            estado = "Revision";
         }
 
-        // 4. Salida de resultados
-        System.out.println("\n----------------------------------");
-        System.out.println("Promedio técnico: " + prom);
+        if (notaFinal >= 7 && documentacion.equalsIgnoreCase("No")) {
+            observacion = "Buen producto, pero mala formalidad.";
+        } else {
+            observacion = "Resultado normal.";
+        }
+
+        System.out.println("\n===== RESULTADOS =====");
+        System.out.println("Promedio tecnico: " + promedio);
         System.out.println("Ajustes aplicados: " + ajustes);
         System.out.println("Nota final: " + notaFinal);
         System.out.println("Estado: " + estado);
-
-        if (notaFinal >= 7 && doc.equalsIgnoreCase("NO")) {
-            System.out.println("Observación: Buen producto, pero mala formalidad");
-        }
+        System.out.println("Observacion: " + observacion);
 
         sc.close();
     }
